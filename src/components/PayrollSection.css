@@ -1,0 +1,188 @@
+.payroll-card {
+  width: 100%;
+  max-width: 800px;
+  min-width: 400px;
+  background: #faf9f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 18px 14px 24px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 32px auto;
+}
+
+.payroll-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.payroll-title {
+  flex: 1;
+  text-align: left;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.2rem;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.payroll-card .payroll-transactions-table {
+  width: 100%;
+  margin-top: 0;
+}
+
+.payroll-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.payroll-card th, .payroll-card td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.payroll-card th {
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.payroll-card th.state-col, .payroll-card td.state-col {
+  min-width: 120px;
+  max-width: 160px;
+}
+.payroll-card th.short-col, .payroll-card td.short-col {
+  min-width: 60px;
+  max-width: 80px;
+}
+.payroll-card th.type-col, .payroll-card td.type-col {
+  min-width: 90px;
+  max-width: 110px;
+}
+.payroll-card th.rate-col, .payroll-card td.rate-col,
+.payroll-card th.setup-col, .payroll-card td.setup-col {
+  min-width: 70px;
+  max-width: 90px;
+}
+.payroll-card th.actions-col, .payroll-card td.actions-col {
+  min-width: 40px;
+  max-width: 50px;
+}
+
+.payroll-table-input {
+  width: 100%;
+  padding: 5px 7px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #fff;
+  color: var(--color-dark);
+  box-sizing: border-box;
+}
+
+.payroll-table-input:focus {
+  outline: none;
+  border-color: var(--color-main);
+  box-shadow: 0 0 0 2px rgba(136, 125, 113, 0.1);
+}
+
+/* Error styling for validation */
+.payroll-table-input.error {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.1);
+}
+
+.payroll-table-input.error:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+}
+
+.payroll-table-input.short {
+  width: 60px;
+  min-width: 40px;
+  max-width: 80px;
+}
+
+.payroll-add-btn {
+  background: var(--color-main);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 18px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: background 0.18s, color 0.18s, transform 0.08s, box-shadow 0.08s;
+}
+.payroll-add-btn:hover {
+  background: var(--color-dark);
+  color: #fff;
+}
+
+.payroll-section-outer {
+  width: 100%;
+  margin: 0 auto 32px auto;
+}
+
+.payroll-title-centered {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  margin: 0 0 18px 0;
+}
+
+.centered-header {
+  text-align: center !important;
+}
+
+.payroll-table-input.account-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23887d71' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px 16px;
+  padding-right: 28px;
+}
+
+.remove-row-btn {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.15s;
+  opacity: 0.8;
+}
+.remove-row-btn:hover {
+  color: #b71c1c;
+  opacity: 1;
+}
+
+.remove-cell {
+  width: 30px;
+  text-align: center;
+  padding: 4px;
+}
+
+.vertical-divider-col {
+  border-left: 2px solid #bcb2a1;
+  border-right: none;
+  background: none;
+} 

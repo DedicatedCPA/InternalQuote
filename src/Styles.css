@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Open+Sans:400,600&display=swap');
+@import './styles/variables.css';
+@import './styles/app.css';
+@import './styles/buttons.css';
+@import './styles/forms.css';
+@import './styles/animations.css';

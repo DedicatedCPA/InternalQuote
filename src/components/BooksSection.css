@@ -1,0 +1,579 @@
+.books-section {
+  margin-top: 20px;
+  padding-bottom: 32px;
+}
+
+.books-accounts-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.account-card {
+  width: 100%;
+  max-width: 275px;
+  min-width: 250px;
+  background: #faf9f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 12px 8px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-header {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.header-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.header-row .account-input.bank-name {
+  flex: 2;
+  min-width: 180px;
+  max-width: 280px;
+}
+.header-row .account-input.last-four {
+  flex: 1;
+  min-width: 80px;
+  max-width: 130px;
+}
+
+.header-row .account-input {
+  min-width: 80px;
+  max-width: 170px;
+}
+
+.account-input {
+  flex: 1;
+  min-width: 0;
+  padding: 6px 8px;
+  font-size: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--color-dark);
+  font-family: 'Open Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  height: 32px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23887d71' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px 16px;
+}
+
+.account-input:focus {
+  outline: none;
+  border-color: var(--color-main);
+  box-shadow: 0 0 0 2px rgba(136, 125, 113, 0.1);
+}
+
+.account-input option {
+  background: #fff;
+  color: var(--color-dark);
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+.account-input:disabled {
+  background-color: #f5f5f5;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.account-input:disabled option {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.account-input.last-four {
+  background-image: none !important;
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  padding-right: 8px;
+}
+
+.books-section-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 0 0 0;
+  width: 100%;
+  min-height: 48px;
+}
+.books-section-header .dashboard-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 0;
+  width: max-content;
+  font-family: 'Libre Baskerville', serif;
+}
+.add-account-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0;
+}
+
+.add-account-btn {
+  background: var(--color-main);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 18px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: background 0.18s, color 0.18s, transform 0.08s, box-shadow 0.08s;
+}
+.add-account-btn:hover {
+  background: var(--color-dark);
+  color: #fff;
+}
+
+.starting-month-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.remove-account-btn {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0px;
+  margin-right: 2px;
+  padding: 0 0px;
+  line-height: 1;
+  transition: color 0.15s;
+  z-index: 1;
+}
+.remove-account-btn:hover {
+  color: #b71c1c;
+}
+
+.starting-month-wrapper .account-input {
+  flex: 1 1 0;
+  min-width: 120px;
+  max-width: 200px;
+  padding-right: 24px;
+}
+
+.monthly-transactions-table {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.monthly-transactions-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.monthly-transactions-table th {
+  background: var(--color-light);
+  color: var(--color-dark);
+  font-weight: 650;
+  padding: 8px 4px;
+  text-align: center;
+  border-bottom: 2px solid var(--color-main);
+  font-size: 0.65rem;
+}
+
+.monthly-transactions-table th.remove-header {
+  width: 30px;
+  background: transparent;
+  border-bottom: none;
+}
+
+.monthly-transactions-table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: middle;
+}
+
+/* Remove the standard light bottom border from averages row - ONLY in Books section */
+.books-section .monthly-transactions-table .averages-row td {
+  border-bottom: none;
+}
+
+.monthly-transactions-table td:first-child {
+  font-weight: 500;
+  color: var(--color-dark);
+  min-width: 80px;
+}
+
+.monthly-transactions-table td.remove-cell {
+  width: 30px;
+  text-align: center;
+  padding: 4px;
+}
+
+/* Fixed width for data columns (Total, Deposits, Checks) */
+.monthly-transactions-table th:nth-child(2),
+.monthly-transactions-table th:nth-child(3),
+.monthly-transactions-table th:nth-child(4),
+.monthly-transactions-table td:nth-child(2),
+.monthly-transactions-table td:nth-child(3),
+.monthly-transactions-table td:nth-child(4) {
+  width: 80px;
+  text-align: center;
+}
+
+/* Center the averages values as well */
+.averages-row td:nth-child(2),
+.averages-row td:nth-child(3),
+.averages-row td:nth-child(4) {
+  text-align: center;
+}
+
+.table-input {
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #fff;
+  color: var(--color-dark);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.table-input:focus {
+  outline: none;
+  border-color: var(--color-main);
+  box-shadow: 0 0 0 2px rgba(136, 125, 113, 0.1);
+}
+
+.remove-month-btn {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+  opacity: 0.7;
+}
+
+.remove-month-btn:hover {
+  color: #b71c1c;
+  opacity: 1;
+}
+
+.payroll-section {
+  padding-bottom: 48px;
+}
+
+/* Error styling for validation */
+.account-input.error {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.1);
+}
+
+.account-input.error:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+}
+
+/* Rate Box Styling */
+.rate-box {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: var(--color-light);
+  border: 1px solid var(--color-main);
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 200px;
+}
+
+.rate-label {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.rate-value {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  color: var(--color-dark);
+  font-weight: bold;
+}
+
+/* Averages Row Styling */
+.averages-row {
+  background: var(--color-light);
+}
+
+/* Add borders to first 4 cells (Month, Total, Deposits, Checks) but not remove column */
+.averages-row td:nth-child(1),
+.averages-row td:nth-child(2),
+.averages-row td:nth-child(3),
+.averages-row td:nth-child(4) {
+  border-top: 2px solid var(--color-main);
+  border-bottom: 1px solid var(--color-main);
+}
+
+.averages-row td {
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.averages-row td:first-child {
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+.section-error {
+  border: 2px solid #d32f2f !important;
+  border-radius: 12px;
+  box-shadow: 0 0 0 2px #d32f2f33;
+}
+
+.section-error-tooltip {
+  background: #ffeaea;
+  color: #b71c1c;
+  border: 2px solid #b71c1c;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin: 18px 0 12px 0;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px 0 #b71c1c22;
+  max-height: 180px;
+  overflow-y: auto;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.error-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+}
+.error-columns ul {
+  flex: 1 1 0;
+  margin: 0;
+  padding-left: 18px;
+  min-width: 0;
+}
+.section-error-tooltip ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.section-error-tooltip li {
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.new-account-checkbox-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--color-light);
+  border: 1.2px solid var(--color-main);
+  border-radius: 6px;
+  padding: 3px 7px 3px 7px;
+  margin: 0px 0 0 0;
+  min-width: 0;
+  width: fit-content;
+  font-size: 0.85em;
+  box-shadow: 0 1px 2px rgba(136, 125, 113, 0.04);
+}
+.new-account-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color: var(--color-main);
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.new-account-checkbox-label input[type="checkbox"] {
+  accent-color: var(--color-main);
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+}
+
+.generate-btn.disabled {
+  background: #e0e0e0 !important;
+  color: #aaa !important;
+  cursor: not-allowed !important;
+  border: 1px solid #ccc !important;
+  opacity: 0.6 !important;
+  pointer-events: auto !important;
+}
+
+.remove-account-confirm-btn {
+  background: none;
+  border: none;
+  color: #b71c1c;
+  font-weight: 700;
+  font-size: 0.9em;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+  margin-left: 0px;
+}
+.remove-account-confirm-btn:hover {
+  background: #ffeaea;
+  color: #d32f2f;
+}
+.remove-confirm-tooltip {
+  position: absolute;
+  top: -90px;
+  right: 0;
+  z-index: 10;
+  background: #fff;
+  border: 2px solid #b71c1c;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px 0 #b71c1c22;
+  padding: 14px 18px 10px 18px;
+  min-width: 260px;
+  max-width: 320px;
+  color: #b71c1c;
+  font-size: 0.98em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.remove-confirm-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+.delete-btn {
+  background: #b71c1c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 14px;
+  font-weight: 700;
+  font-size: 0.97em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.delete-btn:hover {
+  background: #d32f2f;
+}
+.cancel-btn {
+  background: #fff;
+  color: #b71c1c;
+  border: 1.5px solid #b71c1c;
+  border-radius: 5px;
+  padding: 4px 14px;
+  font-weight: 700;
+  font-size: 0.97em;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.cancel-btn:hover {
+  background: #ffeaea;
+  color: #d32f2f;
+}
+
+/* Shorten horizontal lines to end at last data column */
+.monthly-transactions-table tr > td:last-child,
+.monthly-transactions-table tr > th:last-child,
+.averages-row tr > th:last-child {
+  border-right: none;
+}
+
+/* Remove left and bottom border from remove (X/REMOVE) column */
+.monthly-transactions-table .remove-cell,
+.monthly-transactions-table .remove-header {
+  border-left: none !important;
+  border-bottom: none !important;
+  background: transparent !important;
+}
+
+/* Year selector styling */
+.year-selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px 0 24px 0;
+  gap: 8px;
+}
+
+.year-selector-label {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.year-selector {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--color-dark);
+  font-family: 'Open Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  min-width: 160px;
+  max-width: 200px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23887d71' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  padding-right: 40px;
+}
+
+.year-selector:focus {
+  outline: none;
+  border-color: var(--color-main);
+  box-shadow: 0 0 0 2px rgba(136, 125, 113, 0.1);
+}
+
+.year-selector.error {
+  border-color: #d32f2f;
+  box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.1);
+}
+
+.year-selector option {
+  background: #fff;
+  color: var(--color-dark);
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1rem;
+}

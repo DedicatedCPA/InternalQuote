@@ -1,0 +1,135 @@
+.export-btn:active,
+.generate-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+
+.toggle-btn,
+.service-btn {
+  transition: background 0.18s, color 0.18s, transform 0.08s, box-shadow 0.08s;
+}
+.toggle-btn:active,
+.service-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+}
+
+.toggle-slider .slider-bg {
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle-btn,
+.toggle-btn.active {
+  transition: color 0.2s, font-weight 0.2s;
+}
+
+.service-btn.selected {
+  transition: background 0.18s, color 0.18s, transform 0.08s, box-shadow 0.08s;
+}
+
+.service-btn:hover:not(:disabled):not(.selected) {
+  transition: background 0.18s, color 0.18s, box-shadow 0.08s;
+}
+
+/* ===== DASHBOARD TABLE ANIMATIONS ===== */
+
+/* Main table container animations */
+.dashboard-tables {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.dashboard-tables-idle {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.dashboard-tables-fadeOut {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.dashboard-tables-fadeIn {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Individual table animations for more fluid effect */
+.dashboard-table {
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-tables-fadeOut .dashboard-table {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98);
+}
+
+.dashboard-tables-fadeIn .dashboard-table {
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+}
+
+.dashboard-tables-fadeOut .dashboard-table:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.dashboard-tables-fadeOut .dashboard-table:nth-child(2) {
+  transition-delay: 50ms;
+}
+
+.dashboard-tables-fadeIn .dashboard-table:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.dashboard-tables-fadeIn .dashboard-table:nth-child(2) {
+  transition-delay: 50ms;
+}
+
+/* Table row staggered animations */
+.dashboard-tables-fadeOut .table-row {
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.2s ease-in-out;
+}
+
+.dashboard-tables-fadeIn .table-row {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 0.2s ease-in-out;
+}
+
+.dashboard-tables-fadeOut .table-row:nth-child(1) { transition-delay: 0ms; }
+.dashboard-tables-fadeOut .table-row:nth-child(2) { transition-delay: 20ms; }
+.dashboard-tables-fadeOut .table-row:nth-child(3) { transition-delay: 40ms; }
+.dashboard-tables-fadeOut .table-row:nth-child(4) { transition-delay: 60ms; }
+.dashboard-tables-fadeOut .table-row:nth-child(5) { transition-delay: 80ms; }
+
+.dashboard-tables-fadeIn .table-row:nth-child(1) { transition-delay: 0ms; }
+.dashboard-tables-fadeIn .table-row:nth-child(2) { transition-delay: 20ms; }
+.dashboard-tables-fadeIn .table-row:nth-child(3) { transition-delay: 40ms; }
+.dashboard-tables-fadeIn .table-row:nth-child(4) { transition-delay: 60ms; }
+.dashboard-tables-fadeIn .table-row:nth-child(5) { transition-delay: 80ms; }
+
+/* Table title animations */
+.dashboard-tables-fadeOut .table-title {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+.dashboard-tables-fadeIn .table-title {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Table content element transitions */
+.table-title {
+  transition: all 0.2s ease-in-out;
+}
+
+.table-row {
+  transition: all 0.2s ease-in-out;
+}
+
+.table-header {
+  transition: all 0.2s ease-in-out;
+} 

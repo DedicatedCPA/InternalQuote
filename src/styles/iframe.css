@@ -1,0 +1,56 @@
+/* Iframe-specific styles for seamless embedding */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+#root {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 8px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* Ensure all content fits within the iframe */
+.dashboard-content {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.dashboard-tables {
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.dashboard-table {
+  flex: 1 1 auto !important;
+  min-width: 200px !important;
+  max-width: calc(50% - 4px) !important;
+}
+
+/* Responsive adjustments for iframe */
+@media (max-width: 600px) {
+  .dashboard-table {
+    max-width: 100% !important;
+  }
+  
+  .dashboard-content {
+    flex-direction: column !important;
+  }
+} 
